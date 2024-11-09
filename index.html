@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Exercise: Days and Months</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url(https://images.pexels.com/photos/28728726/pexels-photo-28728726/free-photo-of-iconic-view-of-big-ben-and-houses-of-parliament-in-london.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+        h2 { color: #333; }
+        .exercise { margin: 20px 0; padding: 20px; background-color: rgba(255, 255, 255, 0.8); border-radius: 8px; }
+        .result { font-weight: bold; margin-top: 10px; }
+        .input-field { width: 100px; padding: 5px; margin: 5px; }
+        .button { padding: 10px 20px; background-color: #007bff; color: #fff; border: none; cursor: pointer; margin: 5px; }
+        .button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h1>Spelling Exercise: Days and Months</h1>
+
+    <!-- Exercise 1 -->
+    <div class="exercise" id="exercise1">
+        <h2>Exercise 1: Complete the Days of the Week</h2>
+        <p>Fill in the missing letters:</p>
+        <p>M _ n d _ y: <input type="text" id="day1" class="input-field"></p>
+        <p>T _ _ s d _ y: <input type="text" id="day2" class="input-field"></p>
+        <p>W _ d n _ s d _ y: <input type="text" id="day3" class="input-field"></p>
+        <p>T _ _ r s d _ y: <input type="text" id="day4" class="input-field"></p>
+        <p>F _ _ d _ y: <input type="text" id="day5" class="input-field"></p>
+        <p>S _ t _ r d _ y: <input type="text" id="day6" class="input-field"></p>
+        <p>S _ n d _ y: <input type="text" id="day7" class="input-field"></p>
+        <button class="button" onclick="checkExercise1()">Check Exercise 1</button>
+        <button class="button" onclick="resetExercise('exercise1')">Reset Exercise 1</button>
+        <p class="result" id="result1"></p>
+    </div>
+
+    <!-- Exercise 2 -->
+    <div class="exercise" id="exercise2">
+        <h2>Exercise 2: Complete the Months</h2>
+        <p>Fill in the missing letters:</p>
+        <p>J _ n u _ r y: <input type="text" id="month1" class="input-field"></p>
+        <p>F _ b r _ a _ y: <input type="text" id="month2" class="input-field"></p>
+        <p>M _ r c _: <input type="text" id="month3" class="input-field"></p>
+        <p>A p _ _ l: <input type="text" id="month4" class="input-field"></p>
+        <p>M _ y: <input type="text" id="month5" class="input-field"></p>
+        <p>J _ n e: <input type="text" id="month6" class="input-field"></p>
+        <p>J _ l _: <input type="text" id="month7" class="input-field"></p>
+        <p>A _ g _ s t: <input type="text" id="month8" class="input-field"></p>
+        <p>S _ p t _ m b _ r: <input type="text" id="month9" class="input-field"></p>
+        <p>O c _ o b _ r: <input type="text" id="month10" class="input-field"></p>
+        <p>N _ v _ m b _ r: <input type="text" id="month11" class="input-field"></p>
+        <p>D _ c _ m b _ r: <input type="text" id="month12" class="input-field"></p>
+        <button class="button" onclick="checkExercise2()">Check Exercise 2</button>
+        <button class="button" onclick="resetExercise('exercise2')">Reset Exercise 2</button>
+        <p class="result" id="result2"></p>
+    </div>
+
+    <!-- Exercise 3 -->
+    <div class="exercise" id="exercise3">
+        <h2>Exercise 3: Unscramble the Letters</h2>
+        <p>Unscramble the letters to form the correct word:</p>
+        <p>mnoyad: <input type="text" id="scramble1" class="input-field"></p>
+        <p>liapr: <input type="text" id="scramble2" class="input-field"></p>
+        <p>deednaysw: <input type="text" id="scramble3" class="input-field"></p>
+        <p>uaryfber: <input type="text" id="scramble4" class="input-field"></p>
+        <p>trdsyaua: <input type="text" id="scramble5" class="input-field"></p>
+        <p>uagsut: <input type="text" id="scramble6" class="input-field"></p>
+        <p>srpeetbme: <input type="text" id="scramble7" class="input-field"></p>
+        <p>tcorbeo: <input type="text" id="scramble8" class="input-field"></p>
+        <button class="button" onclick="checkExercise3()">Check Exercise 3</button>
+        <button class="button" onclick="resetExercise('exercise3')">Reset Exercise 3</button>
+        <p class="result" id="result3"></p>
+    </div>
+
+    <!-- Exercise 4 -->
+    <div class="exercise" id="exercise4">
+        <h2>Exercise 4: Find the Spelling Error</h2>
+        <p>Each word has a spelling error. Correct the spelling:</p>
+        <p>Munday: <input type="text" id="error1" class="input-field"></p>
+        <p>Fryday: <input type="text" id="error2" class="input-field"></p>
+        <p>Junuary: <input type="text" id="error3" class="input-field"></p>
+        <p>Agust: <input type="text" id="error4" class="input-field"></p>
+        <p>Octuber: <input type="text" id="error5" class="input-field"></p>
+        <p>Thersday: <input type="text" id="error6" class="input-field"></p>
+        <p>Dicember: <input type="text" id="error7" class="input-field"></p>
+        <button class="button" onclick="checkExercise4()">Check Exercise 4</button>
+        <button class="button" onclick="resetExercise('exercise4')">Reset Exercise 4</button>
+        <p class="result" id="result4"></p>
+    </div>
+
+    <script>
+        function calculateScore(answers, inputs) {
+            let score = 0;
+            answers.forEach((answer, i) => {
+                if (inputs[i].value.trim().toLowerCase() === answer.toLowerCase()) {
+                    score++;
+                    inputs[i].style.backgroundColor = "#d4edda";
+                } else {
+                    inputs[i].style.backgroundColor = "#f8d7da";
+                }
+            });
+            return ((score / answers.length) * 100).toFixed(2);
+        }
+
+        function checkExercise1() {
+            const answers = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            const inputs = Array.from(document.querySelectorAll('#exercise1 .input-field'));
+            const score = calculateScore(answers, inputs);
+            document.getElementById('result1').innerText = `Score: ${score}%`;
+        }
+
+        function checkExercise2() {
+            const answers = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const inputs = Array.from(document.querySelectorAll('#exercise2 .input-field'));
+            const score = calculateScore(answers, inputs);
+            document.getElementById('result2').innerText = `Score: ${score}%`;
+        }
+
+        function checkExercise3() {
+            const answers = ["Monday", "April", "Wednesday", "February", "Saturday", "August", "September", "October"];
+            const inputs = Array.from(document.querySelectorAll('#exercise3 .input-field'));
+            const score = calculateScore(answers, inputs);
+            document.getElementById('result3').innerText = `Score: ${score}%`;
+        }
+
+        function checkExercise4() {
+            const answers = ["Monday", "Friday", "January", "August", "October", "Thursday", "December"];
+            const inputs = Array.from(document.querySelectorAll('#exercise4 .input-field'));
+            const score = calculateScore(answers, inputs);
+            document.getElementById('result4').innerText = `Score: ${score}%`;
+        }
+
+        function resetExercise(exerciseId) {
+            const inputs = Array.from(document.querySelectorAll(`#${exerciseId} .input-field`));
+            inputs.forEach(input => {
+                input.value = '';
+                input.style.backgroundColor = '';
+            });
+            document.getElementById(`result${exerciseId[exerciseId.length - 1]}`).innerText = '';
+        }
+    </script>
+</body>
+</html>
